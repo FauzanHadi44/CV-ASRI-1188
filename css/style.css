@@ -773,6 +773,11 @@ footer {
     text-decoration: none;
 }
 
+.fkontak-col span {
+    text-decoration: none;
+    list-style: none;
+}
+
 .container-footer .content-footer {
     display: flex;
     justify-content: space-between;
