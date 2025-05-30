@@ -941,12 +941,8 @@ li.link-name::before {
 }
 
 .fkontak .fkontak-item span a {
-    color: #eaeaea; /* Set to your desired color, e.g., white */
-    text-decoration: none; /* Remove underline if desired */
-}
-
-.fkontak .fkontak-item span a:hover {
-    color: #4A90E2; /* Add hover effect if desired */
+    color: #eaeaea; 
+    text-decoration: none; 
 }
 
 .content-footer hr {
