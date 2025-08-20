@@ -26,14 +26,12 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1.6rem 10%;
-    position: fixed;  /* Ganti sticky dengan fixed */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.7);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);/* Menambahkan bayangan untuk menonjolkan navbar */ /* Line under navbar */
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -54,7 +52,17 @@ nav ul li a {
     transition: all 300ms ease-in-out;
 }
 
-nav ul li a:hover, nav ul li a.active{
+/* Hover effect hanya untuk link Kontak */
+nav ul li a[href="contact.html"]:hover, 
+nav ul li a[href="contact.html"].active {
+    color: #354AA0;
+    background-color: transparent;
+    border-bottom: 3px solid #4A90E2;
+    border-radius: 15px;
+}
+
+/* Active state untuk link Kontak */
+nav ul li a.active {
     color: #354AA0;
     background-color: transparent;
     border-bottom: 3px solid #4A90E2;
@@ -117,9 +125,11 @@ main {
         font-size: 20px;
     }
 
-    nav ul li a:hover {
+    /* Hover effect hanya untuk link Kontak di mobile */
+    nav ul li a[href="contact.html"]:hover {
         color: #354AA0;
         border-bottom: 3px solid #4A90E2;
+        border-radius: 15px;
     }
 
     nav ul li:last-of-type {
@@ -138,15 +148,22 @@ main {
 
 /* KONTAK */
 .container-kontak {
-    width: 80%;
+    width: 85%;
     max-width: 1200px;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 30px 60px 40px 40px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin: 0 auto; /* Menjaga agar tetap sejajar di tengah */
-    overflow: hidden; 
-    margin-top: 100px;
+    /* Fallback untuk browser yang tidak mendukung backdrop-filter */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 249, 250, 0.98) 100%);
+    border-radius: 20px;
+    padding: 40px 60px 50px 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* backdrop-filter untuk browser yang mendukung */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: relative;
 }
 
 .container-kontak .content {
@@ -156,7 +173,7 @@ main {
 }
 
 .container-kontak .content .left-side {
-    width: 25%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -164,6 +181,10 @@ main {
     justify-content: center;
     margin-top: 15px;
     position: relative;
+    background: rgba(29, 79, 156, 0.05);
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .content .left-side::before {
@@ -178,49 +199,93 @@ main {
 }
 
 .content .left-side .detail {
-    margin: 14px;
+    margin: 20px;
     text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.content .left-side .detail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .content .left-side .detail i {
-    font-size: 30px;
-    color: #1D4F9C;
-    margin-bottom: 10px;
+    font-size: 35px;
+    background: linear-gradient(135deg, #1D4F9C, #4A90E2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.content .left-side .detail:hover i {
+    transform: scale(1.1);
 }
 
 .content .left-side .detail .topic {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1D4F9C;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
 }
 
 .content .left-side .detail .text-one,
 .content .left-side .detail .text-two,
 .content .left-side .detail .text-three {
     font-size: 14px;
-    color: #afafb6;
+    color: #666;
+    line-height: 1.5;
+    font-weight: 400;
 }
 
 .container-kontak .content .right-side{
-    width: 75%;
-    margin-left: 75px;
+    width: 70%;
+    margin-left: 60px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .content .right-side .topic-text {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 700;
     color: #1D4F9C;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #1D4F9C, #4A90E2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .right-side .contact-inputs {
-    height: 50px;
+    height: 55px;
     width: 100%;
-    margin: 6px 0;
-    border: none;
+    margin: 12px 0;
+    border: 2px solid transparent;
     font-size: 16px;
-    background: #f0f1f8;
-    border-radius: 6px;
-    padding: 0 15px;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    border-radius: 12px;
+    padding: 0 20px;
     resize: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.right-side .contact-inputs:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 .right-side .psn {
@@ -233,14 +298,33 @@ main {
 .right-side button[type="submit"] {
     color: #fff;
     font-size: 18px;
+    font-weight: 600;
     outline: none;
     border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    background: #1D4F9C;
+    padding: 15px 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1D4F9C, #4A90E2);
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 6px 0;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(29, 79, 156, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.right-side button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.right-side button[type="submit"]:hover::before {
+    left: 100%;
 }
 
 .right-side button[type="submit"]:hover {
@@ -249,39 +333,60 @@ main {
 
 @media (max-width: 1280px) {
     .container-kontak {
+        width: 90%;
         margin: 40px auto;
-        margin-top: 120px; /* Keep the space above the card */
-        margin-bottom: 150px; /* Increased margin to ensure space from the footer */
-        height: auto;
+        margin-top: 120px;
+        margin-bottom: 120px;
+        padding: 35px 40px 45px 40px;
+    }
+    
+    .container-kontak .content .right-side {
+        margin-left: 40px;
+        padding: 15px;
     }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1024px) {
     .container-kontak {
-        margin: 40px auto;
-        margin-top: 120px; /* Adjust the space above the card */
-        height: auto;
-        padding-top: 20px; /* Add some padding to the top */
+        width: 95%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding: 30px 25px 40px 25px;
+    }
+    
+    .container-kontak .content .right-side {
+        margin-left: 30px;
     }
 }
 
 @media (max-width: 830px) {
     .container-kontak {
-        margin: 40px auto;
-        margin-top: 120px; /* Adjust the space above the card for smaller screens */
-        height: auto;
+        width: 95%;
+        margin: 30px auto;
+        margin-top: 100px;
+        margin-bottom: 80px;
+        padding: 25px 20px 35px 20px;
     }
 
     .container-kontak .content {
-        flex-direction: column-reverse;
+        flex-direction: column;
+        gap: 30px;
     }
 
     .container-kontak .content .left-side {
         width: 100%;
         flex-direction: row;
-        margin-top: 40px;
+        margin-top: 0;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .content .left-side .detail {
+        margin: 10px;
+        flex: 1;
+        min-width: 250px;
     }
 
     .container-kontak .content .left-side::before {
@@ -291,6 +396,34 @@ main {
     .container-kontak .content .right-side {
         width: 100%;
         margin-left: 0;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-kontak {
+        width: 95%;
+        margin-bottom: 60px;
+        padding: 20px 15px 30px 15px;
+    }
+    
+    .content .left-side .detail {
+        min-width: 100%;
+        margin: 8px 0;
+    }
+    
+    .container-kontak .content .left-side {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .content .right-side .topic-text {
+        font-size: 28px;
+    }
+    
+    .right-side .contact-inputs {
+        height: 50px;
+        margin: 10px 0;
     }
 }
 
@@ -486,6 +619,16 @@ li.link-name::before {
     color: #eaeaea;
     line-height: 1.5;
     font-weight: 400;
+}
+
+.fkontak .fkontak-item span a {
+    color: #eaeaea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.fkontak .fkontak-item span a:hover {
+    color: #4A90E2;
 }
 
 .content-footer hr {
