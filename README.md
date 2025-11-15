@@ -28,7 +28,7 @@ Website profil perusahaan untuk `CV ASRI 1188`, usaha tekstil dan pakaian jadi y
 
 ## Cara Menjalankan
 - Buka langsung file `index.html` di peramban.
- - Atau jalankan server lokal dan akses `http://asri1188.com` sesuai konfigurasi Anda.
+ - Akses situs produksi di `https://asri1188.com`.
 
 ## Kontak
 - Email: `info.asri1188@gmail.com`
