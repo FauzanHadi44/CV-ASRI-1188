@@ -19,7 +19,7 @@ export default function ContactInfoSection() {
             content: (
                 <div className="flex flex-col gap-1">
                     <a href="tel:+628164822108" className="text-slate-600 hover:text-brand-navy transition-colors">+62 816-4822-108</a>
-                    <a href="tel:+6281261490378" className="text-slate-600 hover:text-brand-navy transition-colors">+62 812-6149-0378</a>
+                    <a href="tel:+6281296667302" className="text-slate-600 hover:text-brand-navy transition-colors">+62 812-9666-7302</a>
                 </div>
             ),
         },

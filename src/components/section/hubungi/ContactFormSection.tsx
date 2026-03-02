@@ -55,7 +55,6 @@ export default function ContactFormSection() {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    {/* Left - Form */}
                     <div className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-slate-100">
                         <h2 className="text-2xl md:text-3xl font-bold font-playfair text-brand-navy mb-2">
                             Kirim Pesan
@@ -164,7 +163,6 @@ export default function ContactFormSection() {
                         </form>
                     </div>
 
-                    {/* Right - Map */}
                     <div className="space-y-8">
                         <div>
                             <h2 className="text-2xl md:text-3xl font-bold font-playfair text-brand-navy mb-2">
