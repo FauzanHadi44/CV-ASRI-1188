@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
             ContactEmail({ name, email, phone, message })
         );
         const { error: sendError } = await resend.emails.send({
-            from: "CV ASRI 1188 Website <onboarding@resend.dev>",
+            from: "CV ASRI 1188 Website <noreply@asri1188.com>",
             to: [contactEmail],
             subject: `[Pesan Website] dari ${name}`,
             html: contactHtml,
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
                 );
 
                 await resend.emails.send({
-                    from: "CV ASRI 1188 <onboarding@resend.dev>",
+                    from: "CV ASRI 1188 <noreply@asri1188.com>",
                     to: [email],
                     subject: "Terima kasih! Pesan Anda sudah kami terima — CV ASRI 1188",
                     html: autoReplyHtml,
