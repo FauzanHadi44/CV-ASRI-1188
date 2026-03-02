@@ -1,39 +1,36 @@
-# CV ASRI 1188 — Profil Usaha
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-<p align="center"><img src="gambar/logo1.png" alt="Logo CV ASRI 1188" width="160"></p>
+## Getting Started
 
-Website profil perusahaan untuk `CV ASRI 1188`, usaha tekstil dan pakaian jadi yang berlokasi di Tangerang. Proyek ini merupakan situs statis berbasis `HTML`, `CSS`, dan `JavaScript` dengan halaman Beranda, Profil, Layanan, Produk, dan Kontak.
+First, run the development server:
 
-## Ringkasan
-- Menampilkan informasi perusahaan, visi & misi, layanan, dan katalog produk.
-- Menggunakan ikon `Font Awesome` dan `Phosphor Icons`, animasi scroll `AOS`, serta efek ketik `TypeIt`.
-- Form kontak terhubung ke `Web3Forms` untuk pengiriman pesan.
-- Favicon dan elemen brand menggunakan gambar logo di `gambar/logo1.png`.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Fitur Utama
-- Navigasi ke `Beranda`, `Profil`, `Layanan`, `Produk`, `Kontak`.
-- Banner dan highlight layanan (Supply bahan, CMT & FOB).
-- Daftar klien dan katalog produk dengan tombol `Pesan` via WhatsApp.
-- Bagian kontak lengkap dengan alamat, email, dan telepon.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Struktur Proyek
-- `index.html` — halaman utama (beranda, profil, layanan, klien)
-- `produk.html` — katalog produk dan pemesanan
-- `contact.html` — formulir kontak (Web3Forms)
-- `css/` — stylesheet (`style.css`, `style2.css`, `produk.css`)
-- `js/` — skrip (`script.js`, `script2.js`, `produk.js`)
-- `gambar/` — aset gambar (termasuk `logo1.png`)
-- `client/` — logo/ikon klien
-- `doc/` — dokumen perusahaan (`CV.ASRI1188.pdf`)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Cara Menjalankan
-- Buka langsung file `index.html` di peramban.
- - Akses situs produksi di `https://asri1188.com`.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Kontak
-- Email: `info.asri1188@gmail.com`
-- WhatsApp: `+62 81296667302`, `+62 8164822108`
-- Alamat: `Taman Asri Lama No.1, Cipadu Jaya, Larangan, Tangerang 15155`
+## Learn More
 
-## Hak Cipta
-© 2025 CV ASRI 1188. Seluruh hak cipta dilindungi.
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

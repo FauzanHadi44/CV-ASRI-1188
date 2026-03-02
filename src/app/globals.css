@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #0f265c;
+
+  --color-brand-blue: #2a5c99;
+
+  --color-brand-accent: #0ea5e9;
+
+  --color-brand-slate: #475569;
+
+  --color-brand-light: #f8fafc;
+
+  --color-brand-white: #ffffff;
+
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f265c;
+
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.overlay-dark {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.75));
+}
+
+.overlay-medium {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.50),
+      rgba(0, 0, 0, 0.40),
+      rgba(0, 0, 0, 0.60));
+}
+
+.overlay-light {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.30),
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.35));
+}
+
+.text-bright {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  filter: brightness(110%);
+}
+
+.text-white-shadow {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.heading-white-bold {
+  color: #ffffff !important;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+  font-weight: 900;
+}
+
+.text-white-enhanced {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  filter: brightness(105%);
+  font-weight: 500;
+}
+
+.wave-white {
+  fill: #ffffff;
+}
+
+.wave-light {
+  fill: #f8fafc;
+}
+
+.wave-navy {
+  fill: #0f265c;
+}
+
+.btn-dark {
+  background-color: #0F2147;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.btn-dark:hover {
+  background-color: #0a1630;
+}
+
+.btn-outline-white {
+  background-color: #ffffff;
+  color: #0F2147;
+  font-weight: 600;
+}
+
+.btn-outline-white:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
