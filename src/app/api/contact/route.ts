@@ -9,7 +9,6 @@ export async function POST(req: NextRequest) {
         const body = await req.json();
         const { name, email, phone, message } = body;
 
-        // Validasi
         if (!name || !phone || !message) {
             return NextResponse.json(
                 { error: "Nama, nomor telepon, dan pesan wajib diisi." },
@@ -33,12 +32,9 @@ export async function POST(req: NextRequest) {
 
         const contactEmail = process.env.CONTACT_EMAIL || "info.asri1188@gmail.com";
 
-        // 1. Render template email untuk admin
         const contactHtml = await render(
             ContactEmail({ name, email, phone, message })
         );
-
-        // 2. Kirim email notifikasi ke admin
         const { error: sendError } = await resend.emails.send({
             from: "CV ASRI 1188 Website <onboarding@resend.dev>",
             to: [contactEmail],
@@ -53,8 +49,6 @@ export async function POST(req: NextRequest) {
                 { status: 500 }
             );
         }
-
-        // 3. Auto-reply ke pengunjung (jika email disediakan)
         if (email) {
             try {
                 const autoReplyHtml = await render(
@@ -68,7 +62,6 @@ export async function POST(req: NextRequest) {
                     html: autoReplyHtml,
                 });
             } catch (replyError) {
-                // Auto-reply gagal tidak menggagalkan keseluruhan proses
                 console.error("Auto-reply error:", replyError);
             }
         }

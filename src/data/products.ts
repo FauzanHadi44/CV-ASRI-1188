@@ -94,4 +94,4 @@ export const clothItems: ClothItem[] = [
     },
 ];
 
-export const ADMIN_WA = "6281261490378";
+export const ADMIN_WA = "6281296667302";
