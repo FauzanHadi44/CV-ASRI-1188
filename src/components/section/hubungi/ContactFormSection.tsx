@@ -188,7 +188,7 @@ export default function ContactFormSection() {
                             <p className="font-bold text-lg mb-1">Butuh respons cepat?</p>
                             <p className="text-slate-300 text-sm mb-4">Hubungi kami langsung via WhatsApp untuk respons lebih cepat.</p>
                             <a
-                                href="https://wa.me/6281261490378?text=Halo%20Admin%20CV%20ASRI%201188%2C%20saya%20ingin%20bertanya."
+                                href="https://wa.me/6281296667302?text=Halo%20Admin%20CV%20ASRI%201188%2C%20saya%20ingin%20bertanya."
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 bg-green-500 text-white font-bold px-6 py-3 rounded-full hover:bg-green-400 transition-all duration-300 text-sm"

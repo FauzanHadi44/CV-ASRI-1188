@@ -56,7 +56,7 @@ export const AutoReplyEmail = ({ name }: AutoReplyEmailProps) => {
                                     Hubungi kami langsung via WhatsApp:
                                 </Text>
                                 <Link
-                                    href="https://wa.me/6281261490378"
+                                    href="https://wa.me/6281296667302"
                                     className="inline-block bg-green-500 text-white text-sm font-bold px-5 py-2 rounded-full mt-3 no-underline"
                                 >
                                     💬 Chat WhatsApp

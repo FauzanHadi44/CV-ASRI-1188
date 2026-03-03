@@ -37,6 +37,7 @@ export async function POST(req: NextRequest) {
         );
         const { error: sendError } = await resend.emails.send({
             from: "CV ASRI 1188 Website <noreply@asri1188.com>",
+            replyTo: email || contactEmail,
             to: [contactEmail],
             subject: `[Pesan Website] dari ${name}`,
             html: contactHtml,
@@ -51,18 +52,26 @@ export async function POST(req: NextRequest) {
         }
         if (email) {
             try {
+                console.log("Sending auto-reply to:", email);
                 const autoReplyHtml = await render(
                     AutoReplyEmail({ name })
                 );
 
-                await resend.emails.send({
+                const { data: replyData, error: replyError } = await resend.emails.send({
                     from: "CV ASRI 1188 <noreply@asri1188.com>",
+                    replyTo: contactEmail,
                     to: [email],
                     subject: "Terima kasih! Pesan Anda sudah kami terima — CV ASRI 1188",
                     html: autoReplyHtml,
                 });
+
+                if (replyError) {
+                    console.error("Auto-reply Resend error:", JSON.stringify(replyError));
+                } else {
+                    console.log("Auto-reply sent successfully, id:", replyData?.id);
+                }
             } catch (replyError) {
-                console.error("Auto-reply error:", replyError);
+                console.error("Auto-reply exception:", replyError);
             }
         }
 
